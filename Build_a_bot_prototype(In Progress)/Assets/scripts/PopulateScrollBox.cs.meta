@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 7a88fb834bf6bac4ba162226410413eb
+timeCreated: 1492973245
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - button: {instanceID: 0}
+  - MakeNewSavedGame: {fileID: 1973982140579046, guid: 6a0409b52ab77934a92dff93fc0646ec,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

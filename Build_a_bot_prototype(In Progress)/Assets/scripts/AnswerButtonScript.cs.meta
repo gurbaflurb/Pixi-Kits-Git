@@ -1,0 +1,21 @@
+fileFormatVersion: 2
+guid: ac0796cf8b22b244593cd83afa3f9d7a
+timeCreated: 1492311088
+licenseType: Free
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences:
+  - rewardObject0: {instanceID: 0}
+  - rewardObject1: {instanceID: 0}
+  - rewardObject2: {instanceID: 0}
+  - rewardObject3: {instanceID: 0}
+  - timer: {instanceID: 0}
+  - checkMark: {instanceID: 0}
+  - redX: {instanceID: 0}
+  - questions: {fileID: 1137272051981676, guid: 005d6e76b8fa4594c95cdfd84398bed0,
+      type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
