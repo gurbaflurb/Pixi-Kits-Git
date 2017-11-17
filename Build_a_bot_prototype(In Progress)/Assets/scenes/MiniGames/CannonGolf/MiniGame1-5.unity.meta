@@ -1,6 +1,12 @@
 fileFormatVersion: 2
+<<<<<<< HEAD:Build_a_bot_prototype(In Progress)/Assets/scenes/MiniGames/CannonGolf/MiniGame1-5.unity.meta
 guid: 0e61c62f24cfeb442a9b0548396c9e05
 timeCreated: 1510881442
+=======
+guid: 41026e60b6584e2478da8bc67c625ee5
+folderAsset: yes
+timeCreated: 1510882956
+>>>>>>> a475ce49614a4fb30237f4ec0791e8d055d47daf:Build_a_bot_prototype(In Progress)/Assets/prefab/MiniGames/HungrySpaceMonkey.meta
 licenseType: Free
 DefaultImporter:
   userData: 

@@ -108,6 +108,7 @@ public class HSM_Manager : MonoBehaviour
     spawnX *= whatSide;
 
     var meteor = Instantiate(meteorPrefab,new Vector3(spawnX,spawnY,0), Quaternion.identity);
+    //meteor.GetComponent<Rigidbody2D>().AddForce(Vector2.down);
   }
   void SpawnFood()
   {
@@ -116,6 +117,8 @@ public class HSM_Manager : MonoBehaviour
 
     var healthy = Instantiate(healthyFoodPrefab, new Vector3(spawnX2, spawnY, 0), Quaternion.identity);
     var junk = Instantiate(junkFoodPrefab, new Vector3(spawnX1, spawnY, 0), Quaternion.identity);
+    //healthy.GetComponent<Rigidbody2D>().AddForce(Vector2.down);
+    //junk.GetComponent<Rigidbody2D>().AddForce(Vector2.down);
   }
   IEnumerator MeteorCooldown(float time)
   {
