@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/scenes/MiniGames/CannonGolf/MiniGame1-9.unity
+- path: Assets/scenes/MiniGames/HungrySpaceGolf/MiniGame2.unity
   isLoaded: 1
   isActive: 1

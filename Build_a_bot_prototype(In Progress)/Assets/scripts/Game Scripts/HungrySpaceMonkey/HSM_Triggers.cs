@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class HSM_Triggers : MonoBehaviour {
-
-  [SerializeField] public bool SlowTrigger;
   [SerializeField] public bool DestoryTrigger;
   [SerializeField] public bool CorrectTrigger;
   [SerializeField] public bool WrongTrigger;
@@ -27,14 +25,6 @@ public class HSM_Triggers : MonoBehaviour {
     if(DestoryTrigger)
     {
       Destroy(other.gameObject);
-    }
-
-    else if(SlowTrigger)
-    {
-      if(other.GetComponent<HungrySpaceMonkey>() != null)
-      {
-        other.GetComponent<HungrySpaceMonkey>().Slowed = true;
-      }
     }
 
     else if(CorrectTrigger)
@@ -61,7 +51,7 @@ public class HSM_Triggers : MonoBehaviour {
       if (other.GetComponent<HungrySpaceMonkey>() != null)
       {
         other.GetComponent<HungrySpaceMonkey>().Boosted = false;
-        other.GetComponent<HungrySpaceMonkey>().Speed += HealthFoodSpeedIncrease;
+        //other.GetComponent<HungrySpaceMonkey>().Speed += HealthFoodSpeedIncrease;
         Destroy(this.gameObject);
       }
     }
@@ -71,9 +61,16 @@ public class HSM_Triggers : MonoBehaviour {
       if (other.GetComponent<HungrySpaceMonkey>() != null)
       {
         other.GetComponent<HungrySpaceMonkey>().Boosted = true;
-        other.GetComponent<HungrySpaceMonkey>().Speed -= HealthFoodSpeedIncrease;
+        //other.GetComponent<HungrySpaceMonkey>().Speed -= HealthFoodSpeedIncrease;
         Destroy(this.gameObject);
       }
+    }
+  }
+  private void OnDestroy()
+  {
+    if(CorrectTrigger || WrongTrigger)
+    {
+      //TODO:set the game back to normal speed and canspawn stuff to true
     }
   }
 }

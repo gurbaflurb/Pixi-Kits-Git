@@ -44,12 +44,17 @@ public class HungrySpaceMonkey : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-    var x = Input.GetAxis("Horizontal");
-    var y = Input.GetAxis("Vertical");
 
-    if(boosted)
+    //var x = Input.GetAxis("Horizontal");
+    //var y = Input.GetAxis("Vertical");
+    bool up = Input.GetKey(KeyCode.W);
+    bool left = Input.GetKey(KeyCode.A);
+    bool down = Input.GetKey(KeyCode.S);
+    bool right = Input.GetKey(KeyCode.D);
+
+    if (boosted)
     {
-      boostedSpeed = 3f;
+      boostedSpeed = 1.5f;
       StartCoroutine(SugarRush());
     }
     else
@@ -57,32 +62,27 @@ public class HungrySpaceMonkey : MonoBehaviour {
       boostedSpeed = 1f;
     }
 
-    if(x > 0)
+    if(right)//if(x > 0)
     {
       transform.position += Vector3.right * speed * boostedSpeed;
     }
-    else if(x < 0)
+    else if(left)//if(x < 0)
     {
       transform.position -= Vector3.right * speed * boostedSpeed;
     }
-
-    if (y > 0)
+    if(up)//if (y > 0)
     {
-      transform.position += Vector3.up * speed;
+      transform.position += Vector3.up * speed * boostedSpeed;
     }
-    else if(y < 0)
+    else if(down)//if(y < 0)
     {
-      transform.position -= Vector3.up * speed;
+      transform.position -= Vector3.up * speed * boostedSpeed;
     }
   }
 
   public void TakeDamage(int damage)
   {
     health -= damage;
-    if(health < 0)
-    {
-      //end game somehow (return to beginning or minigame select?)
-    }
   }
 
   IEnumerator SugarRush()
