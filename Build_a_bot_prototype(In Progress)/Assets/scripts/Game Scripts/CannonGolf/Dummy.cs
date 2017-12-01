@@ -18,7 +18,7 @@ public class Dummy : MonoBehaviour {
     offset = new Vector2(0, 1.19f);
     rgbd = GetComponent<Rigidbody2D>();
     timer = 0;
-;	}
+ 	}
 	
 	// Update is called once per frame
 	void Update () {
